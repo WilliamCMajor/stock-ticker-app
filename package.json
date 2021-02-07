@@ -1,0 +1,31 @@
+{
+  "name": "stock-ticker-app",
+  "version": "1.0.0",
+  "description": "This web application is connect to an Alpha Advantage API and query the api to return stock data. The client\r using the app will be able to enter a stock symbol into a single form input.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WilliamCMajor/stock-ticker-app.git"
+  },
+  "author": "William He",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WilliamCMajor/stock-ticker-app/issues"
+  },
+  "homepage": "https://github.com/WilliamCMajor/stock-ticker-app#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/plugin-transform-runtime": "^7.12.15",
+    "@babel/preset-env": "^7.12.13",
+    "ejs": "^3.1.6",
+    "http-server": "^0.12.3"
+  }
+}
