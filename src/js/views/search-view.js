@@ -6,6 +6,10 @@ function SearchView (viewId){
         console.log("Search View INIT");
     }
 
+    this.updateLabel = function (label) {
+
+    };
+    
     this.configUI()
 
     return this

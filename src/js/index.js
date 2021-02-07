@@ -1,9 +1,8 @@
-import {setStockData, updateStockData, getStockData} from "./models/stock-data.js";
 import stockModel from "./models/stock-model.js";
-import httpGetRequest from "./utils/fetch-data.js";
 import SearchView from "./views/search-view.js";
 import ResultView from "./views/results-view.js";
 import SearchController from "./controllers/search-controller.js";
+
 
 
 
