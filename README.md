@@ -7,7 +7,7 @@ The model will send a GET request to the API, and return data.
 The returning data wil be a json file and containing stock information.
 There are two views, result view will munipulate data and render and display on the site. Search view will have initial data on the site, grab the input value send to controller. Controll is to modify the request URL and parsing data from the model, modify and parsing back to views.
 
-Here is a example of returning data:
+Here is an example of returning data:
 ```javascript
 {
     "Meta Data": {
