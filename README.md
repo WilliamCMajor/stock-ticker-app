@@ -8,6 +8,7 @@ The returning data wil be a json file and containing stock information.
 There are two views, result view will munipulate data and render and display on the site. Search view will have initial data on the site, grab the input value send to controller. Controll is to modify the request URL and parsing data from the model, modify and parsing back to views.
 
 Here is a example of returning data:
+```javascript
 {
     "Meta Data": {
         "1. Information": "Intraday (5min) open, high, low, close prices and volume",
@@ -33,6 +34,7 @@ Here is a example of returning data:
             "5. volume": "401"
         }
 }
+```
 
 ## Site URL
 https://stocker-ticker.netlify.app/
