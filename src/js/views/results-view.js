@@ -17,16 +17,10 @@ const resultHeaderIntraday = `
 </div>
 `
 
-const resultTime = `
-<div>
-
-</div>
-`
-
 const resultView = `
 <div>
     <ul>
-        <li>Time:</li>
+        <li>Time: <%= interval['time'] %> </li>
         <li>Open: <%= interval['1. open'] %></li>
         <li>High: <%= interval['2. high'] %></li>
         <li>Low: <%= interval['3. low'] %></li>
@@ -64,6 +58,7 @@ function ResultView (viewId){
         Object.keys(data[timeSeries]).forEach((element)=>{
             // console.log(element);
             const price = data[timeSeries][element]
+            price.time = element;
             // const time = Object.keys(data[timeSeries])
 
             const elem = ejs.render(resultView, {interval:price})
