@@ -34,7 +34,8 @@ function stockModel(){
         params.set('apikey', this.apiKey)
 
         url = url + params;
-
+        console.log(url);
+        
         const req = await fetch(url)
         const res = await req.json()
         console.log(res);

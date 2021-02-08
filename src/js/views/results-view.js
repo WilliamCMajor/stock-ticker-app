@@ -4,7 +4,7 @@ const resultHeader = `
 <div class="result-header">
     <h2 class="mb-3">Company Symbol: <%= information['2. Symbol'] %></h2>
     <h3 class="mb-3">Information: <%= information['1. Information'] %></h3>
-    <p>Time Zone: <%= information['5. Time Zone'] %></p>
+    <p>Time Zone: <%= information['5. Time Zone'] %><%= information['4. Time Zone'] %></p>
     <p class="last-refresh mb-3">Last refreshed: <%= information['3. Last Refreshed'] %></p>
 </div>
 `
@@ -49,7 +49,7 @@ function ResultView (viewId){
 
         //result header
         const meta = data[metaData]
-        const elemMeta = ejs.render(resultHeader, {information:meta})
+        const elemMeta = ejs.render(resultHeaderIntraday, {intraday:meta})
         this.view.insertAdjacentHTML('afterbegin', elemMeta) 
 
 
@@ -70,18 +70,20 @@ function ResultView (viewId){
         //access object data by key
         let metaData = Object.keys(stock)[0];
         let timeSeries = Object.keys(stock)[1]
-        let stockData = Object.keys(stock[timeSeries])
+        
 
         // clear result after each new search
         this.removeChildElements()
 
         // if no seaerch result, display error message
         if(timeSeries === undefined){
+            
             const elem = ejs.render(noResultsView)
             this.view.insertAdjacentHTML('afterbegin', elem)
 
         }else{
-        
+            let stockData = Object.keys(stock[timeSeries])
+            
             // intraday object data would containe interval pairs, object structure would different
             if((document.querySelector('#timeSeries').value) === "TIME_SERIES_INTRADAY"){
 
@@ -101,7 +103,7 @@ function ResultView (viewId){
 
             stockData.forEach((element)=>{
                 const time = stock[timeSeries][element]
-                console.log(element);
+                time.time = element;
                 const elem = ejs.render(resultView, {interval:time})
                 this.view.insertAdjacentHTML('beforeend', elem)
             })      
