@@ -2,9 +2,6 @@ function SearchController (model, searchView, resultView){
     this.model = model;
     this.searchView = searchView;
     this.resultView = resultView;
-    this.queryFunction = document.querySelector('#time-series').value;
-    // this.querySymbol = "symbol=" + document.querySelector('#symbol').value;
-    this.queryInterval = document.querySelector('#interval').value;
 
     this.configUI = async function (){
         // submit event on the form
@@ -21,9 +18,9 @@ function SearchController (model, searchView, resultView){
         //combine search, parse search parameter
         // no validation yet
         const searchParams = {
-            queryFunction:this.queryFunction,
+            queryFunction:e.currentTarget.timeSeries.value,
             querySymbol:e.currentTarget.symbol.value,
-            queryInterval:this.queryInterval
+            queryInterval:e.currentTarget.interval.value
         }
 
         console.log(e.currentTarget.symbol.value);

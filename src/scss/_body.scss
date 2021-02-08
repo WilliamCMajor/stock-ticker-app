@@ -13,7 +13,8 @@ section {
     margin: 0 auto;
 }
 
-h2,h3,.last-refresh  {
+.result-header,
+.error {
     grid-column: 1 / -1;
     text-align: center;
 }

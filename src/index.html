@@ -16,7 +16,7 @@
         <form id="search">
             <div class="mb-3">
                 <label for="time-series" class="form-label">Time Series</label>
-                <select name="time-series" id="time-series" class="form-select form-select-lg">
+                <select name="time-series" id="timeSeries" class="form-select">
                     <option value="TIME_SERIES_INTRADAY">Intraday</option>
                     <option value="TIME_SERIES_DAILY_ADJUSTED">Daily Adjusted</option>
                 </select>
@@ -29,9 +29,12 @@
     
             <div class="mb-3">
                 <label for="interval">Time interval</label>
-                <select name="interval" id="interval" class="form-select form-select-lg">
+                <select name="interval" id="interval" class="form-select">
+                    <option value="1min">1 Minutes</option>
                     <option value="5min">5 Minutes</option>
-                    <option value="10min">10 Minutes</option>
+                    <option value="15min">15 Minutes</option>
+                    <option value="30min">30 Minutes</option>
+                    <option value="60min">60 Minutes</option>
                 </select>
             </div>
     
