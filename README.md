@@ -1,4 +1,6 @@
 # Stock Ticker App
+https://stocker-ticker.netlify.app/
+
 ## Introduction
 Site URL: https://stocker-ticker.netlify.app/
 
