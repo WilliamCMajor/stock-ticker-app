@@ -1,6 +1,7 @@
 # Stock Ticker App
 ## Introduction
 Site URL: https://stocker-ticker.netlify.app/
+
 This appliction prompt user to enter a stock symbol, choose time interval, and the real time stock data would display.
 
 ## Application
