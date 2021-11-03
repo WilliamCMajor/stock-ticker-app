@@ -1,4 +1,9 @@
 # Stock Ticker App
+## Introduction
+Site URL: https://stocker-ticker.netlify.app/
+This appliction prompt user to enter a stock symbol, choose time interval, and the real time stock data would display.
+
+## Application
 This is a MVC (model, view, control) web application.
 This web application is connect to an Alpha Advantage API and query the api to return stock data. The client
 using the app will be able to enter a stock symbol into a single form input.
@@ -35,9 +40,6 @@ Here is an example of returning data:
         }
 }
 ```
-
-## Site URL
-https://stocker-ticker.netlify.app/
 
 ## API
 https://www.alphavantage.co/documentation/
